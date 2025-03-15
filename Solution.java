@@ -28,6 +28,7 @@ class Result {
     System.out.println(numbers);
     
     Integer teste = 1888;
+    teste = 1955;
     Integer inicial = teste;
     String romanizado = getNMil(teste);
     System.out.println(romanizado);
