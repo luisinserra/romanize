@@ -27,7 +27,7 @@ class Result {
     // Write your code here
     System.out.println(numbers);
     
-    Integer teste = 1883;
+    Integer teste = 1888;
     String romanizado = getNMil(teste);
     System.out.println(romanizado);
     teste = teste - removerMilhar(romanizado);
@@ -71,7 +71,14 @@ class Result {
     System.out.println("teste com " + teste);
     String letraX = getDezena(teste);
     System.out.println("Dezena é " + letraX);
+    teste = teste - removerDezena(letraX);
+
+    System.out.println("teste com " + teste);
+    String letraV = getCinco(teste);
+    System.out.println("Cinco = " + letraV);
+    teste = teste - removerCinco(letraV);
     
+    System.out.println("teste com " + teste);
     
     System.out.println("Finalizado");
     return null;
@@ -179,6 +186,40 @@ class Result {
         Integer vezes = numero / 10;
         for (int i=0; i< vezes; i++) {
             retorno += "X";
+        }
+        return retorno;
+    }
+
+    public static Integer removerDezena(String dez) {
+        Integer retorno = 0;
+        if (dez.equals(("IX"))) {
+            retorno = 9;
+        } else {
+            retorno = 10 * dez.length();
+        }
+        return retorno;
+    }
+
+    public static String getCinco(Integer numero) {
+        if (numero == 4) {
+            return "IV";
+        }
+        if (numero == 9) {
+            return "IX";
+        }
+        if (numero >= 5) {
+            return "V";
+        }
+        return "";
+    }
+
+    public static Integer removerCinco(String cinco) {
+        Integer retorno = 0;
+        if (cinco.equals(("IV"))) {
+            retorno = 4;
+        } 
+        if (cinco.equals("V")) {
+            retorno = 5;
         }
         return retorno;
     }
