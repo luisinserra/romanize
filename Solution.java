@@ -28,6 +28,7 @@ class Result {
     System.out.println(numbers);
     
     Integer teste = 1888;
+    Integer inicial = teste;
     String romanizado = getNMil(teste);
     System.out.println(romanizado);
     teste = teste - removerMilhar(romanizado);
@@ -79,6 +80,11 @@ class Result {
     teste = teste - removerCinco(letraV);
     
     System.out.println("teste com " + teste);
+    String letraI = getUnidade(teste);
+    System.out.println("Unidade: " + letraI);
+
+    String msg = inicial + " = " + romanizado + letraD + letraC + letraL + letraX + letraV + letraI;
+    System.out.println(msg);
     
     System.out.println("Finalizado");
     return null;
@@ -220,6 +226,14 @@ class Result {
         } 
         if (cinco.equals("V")) {
             retorno = 5;
+        }
+        return retorno;
+    }
+
+    public static String getUnidade(Integer unidade) {
+        String retorno = "";
+        for (int i = unidade; i> 0; i--) {
+            retorno += "I";
         }
         return retorno;
     }
