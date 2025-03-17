@@ -12,7 +12,7 @@ import static java.util.stream.Collectors.toList;
 
 
 
-class Result {
+class Solution {
 
     /*
      * Complete the 'romanizer' function below.
@@ -261,7 +261,7 @@ class Result {
 
         List<Integer> numbers = new ArrayList<Integer>(Arrays.asList(array));
 
-        List<String> result = Result.romanizer(numbers);
+        List<String> result = Solution.romanizer(numbers);
 
         System.out.println(result);
 
