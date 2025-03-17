@@ -87,5 +87,17 @@ BufferedReader bufferedReader = new BufferedReader(new InputStreamReader((System
     // bufferedWriter.close();
 }
 
+/*
+ * solução proposta
+ * Map<Integer,Integer> frequencia=new HashMap<>();
+for(Integer valor:ar){
+frequencia.put(valor, frequencia.getOrDefault(valor, 0)+1);
+}
+int pares=0;
+for (Integer valor : frequencia.values()) {
+pares+=valor/2;
+}
+return pares;
+ */
 
 }
