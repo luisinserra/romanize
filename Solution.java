@@ -261,7 +261,7 @@ class Solution {
 
         List<Integer> numbers = new ArrayList<Integer>(Arrays.asList(array));
 
-        List<String> result = Solution.romanizer(numbers);
+        List<String> result = romanizer(numbers);
 
         System.out.println(result);
 
